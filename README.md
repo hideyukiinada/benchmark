@@ -11,7 +11,7 @@ I ran the script 3 times on each machine and documented the result in below tabl
 For each script execution, a function to train the model is called 4 times.
 In terms of the wall-clock time, for each script run, the third and fourth call to train the model seem to provide stabilized number.
 Namely, for Mac, results in seconds are:
-28.086050, 28.610886, 28.562303, 28.036568, 28.602799, 28.396387
+28.086050, 28.610886, 28.562303, 28.036568, 28.602799, 28.396387 with the mean 28.382499.
 
 For Linux,
 
