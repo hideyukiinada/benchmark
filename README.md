@@ -1,5 +1,9 @@
 # benchmark
 
+## Machines used
+* Linux (OS: Ubuntu 18.10, RAM: 48 GB, CPU: 3.4 GHz Intel Core i5-7500, GPU: NVIDIA GeForce GTX 1080, Python: 3.6.7, TensorFlow-GPU: 1.12.0, Keras: 2.2.4)
+* Mac (OS:10.13.5, RAM: 16 GB, CPU: 2.6 GHz Intel Core i5, Python: 3.6.7, TensorFlow: 1.12.0, Keras: 2.2.4)
+
 Result on Mac
 
 | # | Process time | Wall time |
@@ -10,6 +14,7 @@ Result on Mac
 |3 | 77.116006 | 28.610886 |
 
 Result on Mac #2
+
 | # | Process time | Wall time |
 |---|---|---|
 |0 | 104.752804 | 56.123174 |
@@ -18,6 +23,7 @@ Result on Mac #2
 |3 | 77.223991 | 28.036568 |
 
 Result on Mac #3
+
 | # | Process time | Wall time |
 |---|---|---|
 |0 | 101.952952 | 53.308898 |
@@ -26,6 +32,7 @@ Result on Mac #3
 |3 | 76.837717 | 28.396387 |
 
 Result on Linux #1
+
 | # | Process time | Wall time |
 |---|---|---|
 |0 | 15.410076 | 15.327186 |
@@ -34,6 +41,7 @@ Result on Linux #1
 |3 | 0.182779 | 0.177793 |
 
 Result on Linux #2
+
 | # | Process time | Wall time |
 |---|---|---|
 |0 | 15.399605 | 15.316593 |
@@ -42,6 +50,7 @@ Result on Linux #2
 |3 | 0.183427 | 0.177911 |
 
 Result on Linux #3
+
 | # | Process time | Wall time |
 |---|---|---|
 |0 | 15.461966 | 15.384140 |
@@ -49,6 +58,4 @@ Result on Linux #3
 |2 | 0.182690 | 0.178042 |
 |3 | 0.182478 | 0.178016 |
 
-## Machines used
-* Linux (OS: Ubuntu 18.10, RAM: 48 GB, CPU: 3.4 GHz Intel Core i5-7500, GPU: NVIDIA GeForce GTX 1080, Python: 3.6.7, TensorFlow-GPU: 1.12.0, Keras: 2.2.4)
-* Mac (OS:10.13.5, RAM: 16 GB, CPU: 2.6 GHz Intel Core i5, Python: 3.6.7, TensorFlow: 1.12.0, Keras: 2.2.4)
+
