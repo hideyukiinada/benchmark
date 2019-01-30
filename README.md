@@ -1,7 +1,7 @@
 # Benchmark for running a script that uses deep convolutional network
 
 ## Script used
-[Modified version of CIFAR-10 classification script] (https://github.com/hideyukiinada/benchmark/blob/master/project/benchmark1) to just run a single batch
+[Modified version of CIFAR-10 classification script](https://github.com/hideyukiinada/benchmark/blob/master/project/benchmark1) to just run a single batch
 
 ## Machines used
 * Home-built Linux desktop (OS: Ubuntu 18.10, RAM: 48 GB, CPU: 3.4 GHz Intel Core i5-7500, GPU: NVIDIA GeForce GTX 1080, Python: 3.6.7, TensorFlow-GPU: 1.12.0, Keras: 2.2.4)
