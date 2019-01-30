@@ -6,6 +6,18 @@ Result on Mac
 [2] Time elapsed:Process time: 76.605735 seconds. Wall time: 28.086050 seconds
 [3] Time elapsed:Process time: 77.116006 seconds. Wall time: 28.610886 seconds
 
+Result on Mac #2
+[0] Time elapsed:Process time: 104.752804 seconds. Wall time: 56.123174 seconds
+[1] Time elapsed:Process time: 78.961987 seconds. Wall time: 30.115714 seconds
+[2] Time elapsed:Process time: 76.096431 seconds. Wall time: 28.562303 seconds
+[3] Time elapsed:Process time: 77.223991 seconds. Wall time: 28.036568 seconds
+
+Result on Mac #3
+[0] Time elapsed:Process time: 101.952952 seconds. Wall time: 53.308898 seconds
+[1] Time elapsed:Process time: 76.955266 seconds. Wall time: 27.672237 seconds
+[2] Time elapsed:Process time: 76.044292 seconds. Wall time: 28.602799 seconds
+[3] Time elapsed:Process time: 76.837717 seconds. Wall time: 28.396387 seconds
+
 Result on Linux #1
 [0] Time elapsed:Process time: 15.410076 seconds. Wall time: 15.327186 seconds
 [1] Time elapsed:Process time: 0.215100 seconds. Wall time: 0.204940 seconds
