@@ -1,4 +1,4 @@
-# benchmark
+# Benchmark for running a script that uses deep convolutional network
 
 ## Script used
 [Modified version of CIFAR-10 classification script] (https://github.com/hideyukiinada/benchmark/blob/master/project/benchmark1) to just run a single batch
