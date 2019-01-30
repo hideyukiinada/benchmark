@@ -1,5 +1,11 @@
 # Benchmark for running a script that uses deep convolutional network
 
+## Motivation
+When I first started playing with machine learning,  I didn't have a machine with the GPU that can accelerate training.
+However, as I got more serious, I noticed that it takes too much time to train on CPU and bought Nvidia GeForce GTX 1050 Ti for my Linux desktop. 
+card.  As I got even more serious, I upgraded GPU to GeForce GTX 1080.  Ever since then, when I write ML code on my Mac mini, I almost always run on my Linux desktop.  I really haven't measured how much faster the GPU is as I know that it's just too slow to run my job on CPU.  However, I realized that it would be nice if I can say how much faster in a concrete term instead
+of saying "Much faster."  So I decided to run a benchmark test using the modified version of my CIFAR-10 script.
+
 ## Script used
 [Modified version of CIFAR-10 classification script](https://github.com/hideyukiinada/benchmark/blob/master/project/benchmark1) to just run a single batch
 
