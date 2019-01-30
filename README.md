@@ -14,7 +14,7 @@ Namely, for Mac, results in seconds are:
 28.086050, 28.610886, 28.562303, 28.036568, 28.602799, 28.396387 with the mean 28.382499.
 
 For Linux,
-
+0.178514, 0.177793, 0.177940, 0.177911, 0.178042, 0.178016 with the mean 0.178036
 
 
 ## Script used
