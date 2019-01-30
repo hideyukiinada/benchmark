@@ -41,6 +41,7 @@ EPOCHS = 1
 BATCH_SIZE = 64
 NUM_TESTS = 4
 
+
 def single_conv_block(tens, filters=None, kernel_size=None, strides=None):
     tens = Conv2D(filters=filters, kernel_size=kernel_size, strides=strides, padding='SAME')(tens)
     tens = BatchNormalization()(tens)
@@ -48,11 +49,13 @@ def single_conv_block(tens, filters=None, kernel_size=None, strides=None):
 
     return tens
 
+
 def single_conv_block_no_activation(tens, filters=None, kernel_size=None, strides=None):
     tens = Conv2D(filters=filters, kernel_size=kernel_size, strides=strides, padding='SAME')(tens)
     tens = BatchNormalization()(tens)
 
     return tens
+
 
 def single_resnet_block(tens, filters=None, kernel_size=None, downsample=False):
     original_tens = tens
@@ -73,10 +76,9 @@ def single_resnet_block(tens, filters=None, kernel_size=None, downsample=False):
 
 
 def n_resnet_blocks(num_blocks, tens, filters_prev=None, filters=None, kernel_size=None, downsample=False):
-
     if downsample:
         tens = single_resnet_block(tens, filters=filters, kernel_size=kernel_size, downsample=True)
-        for i in range(num_blocks-1):
+        for i in range(num_blocks - 1):
             tens = single_resnet_block(tens, filters=filters, kernel_size=kernel_size)
     else:
         for i in range(num_blocks):
@@ -118,12 +120,17 @@ def train_and_predict():
 
     print("Training start")
     for i in range(NUM_TESTS):
-        start_time = time.time()
+        # Per Python doc, process_time() is fractional seconds of the sum of the system and user CPU time of
+        # the current process.  Python 3.3 is required.
+        start_time = time.process_time()
+        start_wall_time = time.time()
         # Just run a single batch as it will take too long to run an epoch on CPU
-        model.train_on_batch(x[0:BATCH_SIZE,:,:,:], y_oh[0:BATCH_SIZE,:])
-        end_time = time.time()
+        model.train_on_batch(x[0:BATCH_SIZE, :, :, :], y_oh[0:BATCH_SIZE, :])
+        end_time = time.process_time()
+        end_wall_time = time.time()
         elapsed_time = end_time - start_time
-        print("[%d] Time elapsed:%f seconds" % (i, elapsed_time))
+        elapsed_wall_time = end_wall_time - start_wall_time
+        print("[%d] Time elapsed:Process time: %f seconds. Wall time: %f seconds" % (i, elapsed_time, elapsed_wall_time))
 
 
 def main():
