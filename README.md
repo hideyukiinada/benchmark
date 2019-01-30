@@ -8,6 +8,9 @@
 * Mac mini (Late 2014) (OS:10.13.5, RAM: 16 GB, CPU: 2.6 GHz Intel Core i5, Python: 3.6.7, TensorFlow: 1.12.0, Keras: 2.2.4)
 
 ## Results
+I ran the script 3 times on each machine and documented the result in below tables.
+For each script execution, a function to train the model is called 4 times.
+
 ### Result on Mac #1
 
 | # | Process time | Wall time |
@@ -17,7 +20,7 @@
 |3 | 76.605735 | 28.086050 |
 |4 | 77.116006 | 28.610886 |
 
-Result on Mac #2
+### Result on Mac #2
 
 | # | Process time | Wall time |
 |---|---|---|
