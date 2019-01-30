@@ -6,6 +6,17 @@ However, as I got more serious, I noticed that it takes too much time to train o
 card.  As I got even more serious, I upgraded GPU to GeForce GTX 1080.  Ever since then, when I write ML code on my Mac mini, I almost always run on my Linux desktop.  I really haven't measured how much faster the GPU is as I know that it's just too slow to run my job on CPU.  However, I realized that it would be nice if I can say how much faster in a concrete term instead
 of saying "Much faster."  So I decided to run a benchmark test using the modified version of my CIFAR-10 script.
 
+# Results
+I ran the script 3 times on each machine and documented the result in below tables.
+For each script execution, a function to train the model is called 4 times.
+In terms of the wall-clock time, for each script run, the third and fourth call to train the model seem to provide stabilized number.
+Namely, for Mac, results in seconds are:
+28.086050, 28.610886, 28.562303, 28.036568, 28.602799, 28.396387
+
+For Linux,
+
+
+
 ## Script used
 [Modified version of CIFAR-10 classification script](https://github.com/hideyukiinada/benchmark/blob/master/project/benchmark1) to just run a single batch
 
@@ -13,9 +24,7 @@ of saying "Much faster."  So I decided to run a benchmark test using the modifie
 * Home-built Linux desktop (OS: Ubuntu 18.10, RAM: 48 GB, CPU: 3.4 GHz Intel Core i5-7500, GPU: NVIDIA GeForce GTX 1080, Python: 3.6.7, TensorFlow-GPU: 1.12.0, Keras: 2.2.4)
 * Mac mini (Late 2014) (OS:10.13.5, RAM: 16 GB, CPU: 2.6 GHz Intel Core i5, Python: 3.6.7, TensorFlow: 1.12.0, Keras: 2.2.4)
 
-## Results
-I ran the script 3 times on each machine and documented the result in below tables.
-For each script execution, a function to train the model is called 4 times.
+## Complete Results
 
 ### Result on Mac #1
 
