@@ -1,5 +1,5 @@
-# Benchmark for running a script that uses deep convolutional network
-
+# Benchmark for running a script that uses deep convolutional neural network
+Hide Inada
 ## Motivation
 When I first started playing with machine learning,  I didn't have a machine with the GPU that can accelerate training.
 However, as I got more serious, I noticed that it was taking too long to train on my Mac mini and bought a Nvidia GeForce GTX 1050 Ti for my Linux desktop. 
