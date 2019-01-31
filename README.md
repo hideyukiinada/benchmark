@@ -8,20 +8,28 @@ However, as I got more serious about AI, I noticed that it was taking too long t
 As I got even more serious, I upgraded the GPU to GeForce GTX 1080.  Ever since then, when I write ML code on my Mac mini, I almost always run my experiment on my Linux desktop.  I really haven't measured how much faster training on a GPU is as opposed to running on a CPU.  That's because I already know that it's just too slow to run my job on a CPU.  However, I realized that it would be nice if I can say how much faster in a concrete term instead of saying "Much faster."  So I decided to run an informal performance test using [a modified version of my CIFAR-10 script](https://github.com/hideyukiinada/benchmark/blob/master/project/benchmark1) which I believe is a realistic deep neural network application with 63 convolutional layers including ResNet blocks.
 
 # Results
-I ran the script 3 times on each machine and documented the result in tables at the end of this article.
+I ran the script 3 times on each configuration (Linux with the GPU version of TensorFlow, Linux with the CPU version of TensorFlow, Mac Mini) and documented the result in tables at the end of this article.
 For each script execution, a function to train the model is called 4 times.  For each call, time to complete the call was logged.  So overall elapsed time was measured 12 times.
 
 In terms of wall-clock time, for each script run, the third and fourth calls to train the model seem to provide consistent numbers.
 Namely, for Mac, results in seconds are:
 28.086050, 28.610886, 28.562303, 28.036568, 28.602799, 28.396387 with the mean 28.382499.
 
-For Linux, equivalent results are:
+For Linux with tensorflow-GPU, equivalent results are:
 0.178514, 0.177793, 0.177940, 0.177911, 0.178042, 0.178016 with the mean 0.178036
 
-If I divide 28.382499 by 0.178036, I'd get 159.419999325979
+For Linux with tensorflow (CPU), equivalent results are:
+9.324023, 9.276448, 9.338406, 9.307102, 9.299809, 9.267833 with the mean 9.302270.
 
-So, for this training, **Linux with the 1080 GPU was 159x faster than the Mac mini with CPU**.
-When I was running my scripts to test accuracy against CIFAR-10, it took 5+ hours to run 100 epochs (e.g. 5.17 hours for the keras_29 script) on the same Linux box.  If I had run these scripts on my Mac mini, it would have taken 795 hours or 33 days.
+To compare Linux GPU vs Linux CPU, if I divide 9.302270 by 0.178036, I'd get 52.2493
+To Compare Linux GPU vs Mac Mini, if I divide 28.382499 by 0.178036, I'd get 159.4200
+
+So, for this training, 
+* **Linux with TensorFlow (GPU version) was 52x faster than the same hardware with TensorFlow (CPU version)**
+* **Linux with TensorFlow (GPU version) was 159x faster than the Mac mini TensorFlow (CPU version)**.
+
+When I was running my scripts to test accuracy against CIFAR-10, it took 5+ hours to run 100 epochs (e.g. 5.17 hours for the keras_29 script) on the same Linux box with the GPU.  If I had run these scripts on the same Linux hardware without using GPU, it would have taken 260 hours or 10.8 days.
+If I had run these scripts on my Mac mini, it would have taken 795 hours or 33 days.
 
 ## Script used
 [Modified version of CIFAR-10 classification script](https://github.com/hideyukiinada/benchmark/blob/master/project/benchmark1) to just run a single batch
