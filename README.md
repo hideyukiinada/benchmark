@@ -6,7 +6,7 @@ However, as I got more serious, I noticed that it was taking too long to train o
 As I got even more serious, I upgraded the GPU to GeForce GTX 1080.  Ever since then, when I write ML code on my Mac mini, I almost always run on my Linux desktop.  I really haven't measured how much faster training on a GPU as opposed to a CPU as I already know that it's just too slow to run my job on CPU.  However, I realized that it would be nice if I can say how much faster in a concrete term instead of saying "Much faster."  So I decided to run a benchmark test using [a modified version of my CIFAR-10 script](https://github.com/hideyukiinada/cifar10/blob/master/project/keras_25).
 
 # Results
-I ran the script 3 times on each machine and documented the result in below tables.
+I ran the script 3 times on each machine and documented the result in tables at the end of this article.
 For each script execution, a function to train the model is called 4 times.
 In terms of the wall-clock time, for each script run, the third and fourth call to train the model seem to provide stabilized number.
 Namely, for Mac, results in seconds are:
