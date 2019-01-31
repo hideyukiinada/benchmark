@@ -1,5 +1,6 @@
 # Benchmark for running a script that uses deep convolutional neural network
 January 30, 2019
+&nbsp;
 Hide Inada
 ## Motivation
 When I first started playing with machine learning,  I didn't have a machine with the GPU that can accelerate training.
