@@ -21,14 +21,7 @@ For Linux, equivalent results are:
 If I divide 28.382499 by 0.178036, I'd get 159.419999325979
 
 So, for this training, **Linux with the 1080 GPU was 159x faster than the Mac mini with CPU**.
-When I was running my scripts to test accuracy against CIFAR-10, it took 5+ hours to run 100 epochs (e.g. 5.17 hours for the keras_29 script).  If I had run these scripts on my Mac mini, it would have taken 795 hours or 33 days.  I haven't seen a performance metrics between the latest version of Macbook Pro vs 2014 Mac mini, but I doubt that it's 159x faster.
-
-## Implications
-I'd like to share my view on how the need for GPU would impact software development companies who are or will be building a team of ML developers or data scientists for image processing (classification/object detection/generation) using a convolutional neural network.  My experience is more limited for NLP, but my experience is that LSTM is also slow to train on CPU which is demonstrated by the fact that there is a special Keras LSTM class for GPU called [CuDNNLSTM](https://keras.io/layers/recurrent/).
-Because of the slowness of training on CPU, a developer in the above mentioned ML areas, GPU is not a nice to have hardware, but a must-have as it is nearly impossible for a developer to develop an ML application and wait for 30+ days to get a result of a single run.
-
-I see two paths forward.  One is to use a crowd vendor's GPU environment such as AWS.  Another option is to work with the IT team for getting a desktop with an highend GPU.  The first option may be relatively painless if your CI and production environment already run in crowd vendor's space.  However, if you have a inhouse CI environment, that means that you also need to have the CI environment set up with the crowd vendor to do an official training of a model and test.
-If you go for the second option, then instead of or in addition to handing out a high-end laptop, you also need to start handing out a desktop or a special laptop with a high-end GPU.  Also, before you buy a GPU, you may want to research to see what GPU cards are compliant with Nvidia's licensing terms. For example, this article from a year ago discusses [the prohibition of a GeForce card](https://www.theregister.co.uk/2018/01/03/nvidia_server_gpus/).
+When I was running my scripts to test accuracy against CIFAR-10, it took 5+ hours to run 100 epochs (e.g. 5.17 hours for the keras_29 script).  If I had run these scripts on my Mac mini, it would have taken 795 hours or 33 days.  I haven't seen a performance metrics between the latest version of MacBook Pro vs 2014 Mac mini, but I doubt that an MBP is 159x faster.
 
 ## Script used
 [Modified version of CIFAR-10 classification script](https://github.com/hideyukiinada/benchmark/blob/master/project/benchmark1) to just run a single batch
