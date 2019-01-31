@@ -59,7 +59,7 @@ All time listed are in seconds.
 |3 | 76.044292 | 28.602799 |
 |4 | 76.837717 | 28.396387 |
 
-### Result on Linux #1
+### Result on Linux (with GPU) #1
 
 | # | Process time | Wall time |
 |---|---|---|
@@ -68,7 +68,7 @@ All time listed are in seconds.
 |3 | 0.178330 | 0.178514 |
 |4 | 0.182779 | 0.177793 |
 
-### Result on Linux #2
+### Result on Linux (with GPU) #2
 
 | # | Process time | Wall time |
 |---|---|---|
@@ -77,7 +77,7 @@ All time listed are in seconds.
 |3 | 0.182133 | 0.177940 |
 |4 | 0.183427 | 0.177911 |
 
-### Result on Linux #3
+### Result on Linux (with GPU) #3
 
 | # | Process time | Wall time |
 |---|---|---|
@@ -86,4 +86,30 @@ All time listed are in seconds.
 |3 | 0.182690 | 0.178042 |
 |4 | 0.182478 | 0.178016 |
 
+### Result on Linux (No GPU) #1
 
+
+| # | Process time | Wall time |
+|---|---|---|
+|1 |48.274312 | 23.040985 |
+|2 |34.430235 | 9.368206 |
+|3 |34.321718 | 9.324023 |
+|4 |34.317785 | 9.276448 |
+
+### Result on Linux (No GPU) #2
+
+| # | Process time | Wall time |
+|---|---|---|
+|1 |48.388282 | 23.123769 |
+|2 |34.543987 | 9.418122 |
+|3 |34.492898 | 9.338406 |
+|4 |34.354913 | 9.307102 |
+
+### Result on Linux (No GPU) #3
+
+| # | Process time | Wall time |
+|---|---|---|
+|1 |48.415019 | 23.061219 |
+|2 |34.505381 | 9.415779 |
+|3 |34.407682 | 9.299809 |
+|4 |34.255111 | 9.267833 |
