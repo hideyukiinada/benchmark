@@ -19,6 +19,7 @@ For Linux,
 If I divide 28.382499 by 0.178036, I'd get 159.419999325979
 
 So, for this training, **Linux with the 1080 GPU was 159x faster than the Mac mini with CPU**.
+When I was running my scripts to test accuracy against CIFAR-10, it took 5+ hours to run 100 epochs (e.g. 5.17 hours for the keras_29 script).  If I had run these scripts on my Mac mini, it would have taken 795 hours or 33 days.  I rest my case.
 
 ## Script used
 [Modified version of CIFAR-10 classification script](https://github.com/hideyukiinada/benchmark/blob/master/project/benchmark1) to just run a single batch
