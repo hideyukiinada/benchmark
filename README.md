@@ -31,7 +31,7 @@ When I was running my scripts to test accuracy against CIFAR-10, it took 5+ hour
 * Mac mini (Late 2014) (OS:10.13.5, RAM: 16 GB, CPU: 2.6 GHz Intel Core i5, Python: 3.6.7, TensorFlow: 1.12.0, Keras: 2.2.4)
 
 ## Complete Results
-
+All time listed are in seconds.
 ### Result on Mac #1
 
 | # | Process time | Wall time |
