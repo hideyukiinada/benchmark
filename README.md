@@ -4,7 +4,7 @@ January 30, 2019
 Hide Inada
 ## Motivation
 When I first started playing with machine learning,  I didn't have a machine with a GPU that can accelerate training.
-However, as I got more serious about AI, I noticed that it was taking too long to train on my Mac mini. I bought a Nvidia GeForce GTX 1050 Ti for my Linux desktop to speed up my experiment.
+However, as I got more serious about AI, I noticed that it was taking too long to train on my Mac mini. I bought an NVIDIA GeForce GTX 1050 Ti for my Linux desktop to speed up my experiment.
 As I got even more serious, I upgraded the GPU to GeForce GTX 1080.  Ever since then, when I write ML code on my Mac mini, I almost always run my experiment on my Linux desktop.  I really haven't measured how much faster training on a GPU is as opposed to running on a CPU.  That's because I already know that it's just too slow to run my job on a CPU.  However, I realized that it would be nice if I can say how much faster in a concrete term instead of saying "Much faster."  So I decided to run an informal performance test using [a modified version of my CIFAR-10 script](https://github.com/hideyukiinada/benchmark/blob/master/project/benchmark1) which I believe is a realistic deep neural network application with 63 convolutional layers including ResNet blocks.
 
 # Results
