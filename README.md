@@ -16,6 +16,9 @@ Namely, for Mac, results in seconds are:
 For Linux,
 0.178514, 0.177793, 0.177940, 0.177911, 0.178042, 0.178016 with the mean 0.178036
 
+If I divide 28.382499 by 0.178036, I'd get 159.419999325979
+
+So, for this training, **Linux with the 1080 GPU was 159x faster than the Mac mini with CPU**.
 
 ## Script used
 [Modified version of CIFAR-10 classification script](https://github.com/hideyukiinada/benchmark/blob/master/project/benchmark1) to just run a single batch
