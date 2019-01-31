@@ -28,7 +28,7 @@ I'd like to share my view on how the need for GPU would impact software developm
 Because of the slowness of training on CPU, a developer in the above mentioned ML areas, GPU is not a nice to have hardware, but a must-have as it is nearly impossible for a developer to develop an ML application and wait for 30+ days to get a result of a single run.
 
 I see two paths forward.  One is to use a crowd vendor's GPU environment such as AWS.  Another option is to work with the IT team for getting a desktop with an highend GPU.  The first option may be relatively painless if your CI and production environment already run in crowd vendor's space.  However, if you have a inhouse CI environment, that means that you also need to have the CI environment set up with the crowd vendor to do an official training of a model and test.
-If you go for the second option, then instead of or in addition to handing out a high-end laptop, you also need to start handing out a desktop or a special laptop with a high-end GPU.
+If you go for the second option, then instead of or in addition to handing out a high-end laptop, you also need to start handing out a desktop or a special laptop with a high-end GPU.  Also, before you buy a GPU, you may want to research to see what GPU cards are compliant with Nvidia's licensing terms. For example, this article from a year ago discusses [the prohibition of a GeForce card](https://www.theregister.co.uk/2018/01/03/nvidia_server_gpus/).
 
 ## Script used
 [Modified version of CIFAR-10 classification script](https://github.com/hideyukiinada/benchmark/blob/master/project/benchmark1) to just run a single batch
