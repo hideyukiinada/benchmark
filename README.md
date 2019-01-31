@@ -2,9 +2,8 @@
 
 ## Motivation
 When I first started playing with machine learning,  I didn't have a machine with the GPU that can accelerate training.
-However, as I got more serious, I noticed that it takes too much time to train on CPU and bought Nvidia GeForce GTX 1050 Ti for my Linux desktop. 
-card.  As I got even more serious, I upgraded GPU to GeForce GTX 1080.  Ever since then, when I write ML code on my Mac mini, I almost always run on my Linux desktop.  I really haven't measured how much faster the GPU is as I know that it's just too slow to run my job on CPU.  However, I realized that it would be nice if I can say how much faster in a concrete term instead
-of saying "Much faster."  So I decided to run a benchmark test using the modified version of my CIFAR-10 script.
+However, as I got more serious, I noticed that it was taking too long to train on my Mac mini and bought a Nvidia GeForce GTX 1050 Ti for my Linux desktop. 
+As I got even more serious, I upgraded the GPU to GeForce GTX 1080.  Ever since then, when I write ML code on my Mac mini, I almost always run on my Linux desktop.  I really haven't measured how much faster training on a GPU as opposed to a CPU as I already know that it's just too slow to run my job on CPU.  However, I realized that it would be nice if I can say how much faster in a concrete term instead of saying "Much faster."  So I decided to run a benchmark test using [a modified version of my CIFAR-10 script](https://github.com/hideyukiinada/cifar10/blob/master/project/keras_25).
 
 # Results
 I ran the script 3 times on each machine and documented the result in below tables.
