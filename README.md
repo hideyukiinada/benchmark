@@ -7,12 +7,13 @@ As I got even more serious, I upgraded the GPU to GeForce GTX 1080.  Ever since 
 
 # Results
 I ran the script 3 times on each machine and documented the result in tables at the end of this article.
-For each script execution, a function to train the model is called 4 times.
-In terms of the wall-clock time, for each script run, the third and fourth call to train the model seem to provide stabilized number.
+For each script execution, a function to train the model is called 4 times.  For each call, the time to complete the call was logged.  So overall time was measured 12 times.
+
+In terms of wall-clock time, for each script run, the third and fourth calls to train the model seem to provide stabilized number.
 Namely, for Mac, results in seconds are:
 28.086050, 28.610886, 28.562303, 28.036568, 28.602799, 28.396387 with the mean 28.382499.
 
-For Linux,
+For Linux, equivalent results are:
 0.178514, 0.177793, 0.177940, 0.177911, 0.178042, 0.178016 with the mean 0.178036
 
 If I divide 28.382499 by 0.178036, I'd get 159.419999325979
