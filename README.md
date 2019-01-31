@@ -22,7 +22,7 @@ For Linux with tensorflow (CPU), equivalent results are:
 9.324023, 9.276448, 9.338406, 9.307102, 9.299809, 9.267833 with the mean 9.302270.
 
 To compare Linux GPU vs Linux CPU, if I divide 9.302270 by 0.178036, I'd get 52.2493. &nbsp;
-To Compare Linux GPU vs Mac Mini, if I divide 28.382499 by 0.178036, I'd get 159.4200
+To compare Linux GPU vs Mac Mini, if I divide 28.382499 by 0.178036, I'd get 159.4200
 
 So, for this training, 
 * **Linux with TensorFlow (GPU version) was 52x faster than the same hardware with TensorFlow (CPU version)**
