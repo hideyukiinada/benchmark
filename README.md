@@ -21,6 +21,14 @@ If I divide 28.382499 by 0.178036, I'd get 159.419999325979
 So, for this training, **Linux with the 1080 GPU was 159x faster than the Mac mini with CPU**.
 When I was running my scripts to test accuracy against CIFAR-10, it took 5+ hours to run 100 epochs (e.g. 5.17 hours for the keras_29 script).  If I had run these scripts on my Mac mini, it would have taken 795 hours or 33 days.  I rest my case.
 
+## Implications
+I'd like to share my view on how the need for GPU would impact software development companies who are building a team of ML developers or data scientists for image processing (classification/object detection/generation) using a convolutional neural network.  My experience is more limited for NLP, but my experience is that LSTM is also slow to train on CPU which is demonstrated by the fact that there is a special Keras LSTM class for GPU called [CuDNNLSTM](https://keras.io/layers/recurrent/).
+Therefore, for a ML developer, GPU is not a nice to have hardware, but a must-have as it is nearly impossible for a developer to develop an ML application and wait for 30+ days to get a result of a single run.
+
+I see two paths.  One is to use a crowd ventor's GPU environment such as AWS.  Another option is to work with the IT team for getting a desktop with an highend GPU.
+If you have CI environment, the demand will also go up for machines with GPU to train the model.
+
+
 ## Script used
 [Modified version of CIFAR-10 classification script](https://github.com/hideyukiinada/benchmark/blob/master/project/benchmark1) to just run a single batch
 
