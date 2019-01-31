@@ -3,15 +3,15 @@ January 30, 2019
 &nbsp;
 Hide Inada
 ## Motivation
-When I first started playing with machine learning,  I didn't have a machine with the GPU that can accelerate training.
-However, as I got more serious, I noticed that it was taking too long to train on my Mac mini and bought a Nvidia GeForce GTX 1050 Ti for my Linux desktop. 
-As I got even more serious, I upgraded the GPU to GeForce GTX 1080.  Ever since then, when I write ML code on my Mac mini, I almost always run on my Linux desktop.  I really haven't measured how much faster training on a GPU as opposed to a CPU as I already know that it's just too slow to run my job on CPU.  However, I realized that it would be nice if I can say how much faster in a concrete term instead of saying "Much faster."  So I decided to run a benchmark test using [a modified version of my CIFAR-10 script](https://github.com/hideyukiinada/cifar10/blob/master/project/keras_25).
+When I first started playing with machine learning,  I didn't have a machine with a GPU that can accelerate training.
+However, as I got more serious about AI, I noticed that it was taking too long to train on my Mac mini. I bought a Nvidia GeForce GTX 1050 Ti for my Linux desktop to speed up my experiment.
+As I got even more serious, I upgraded the GPU to GeForce GTX 1080.  Ever since then, when I write ML code on my Mac mini, I almost always run my experiment on my Linux desktop.  I really haven't measured how much faster training on a GPU is as opposed to a CPU.  That's because I already know that it's just too slow to run my job on CPU.  However, I realized that it would be nice if I can say how much faster in a concrete term instead of saying "Much faster."  So I decided to run a benchmark test using [a modified version of my CIFAR-10 script](https://github.com/hideyukiinada/cifar10/blob/master/project/keras_25).
 
 # Results
 I ran the script 3 times on each machine and documented the result in tables at the end of this article.
-For each script execution, a function to train the model is called 4 times.  For each call, the time to complete the call was logged.  So overall time was measured 12 times.
+For each script execution, a function to train the model is called 4 times.  For each call, time to complete the call was logged.  So overall elapsed time was measured 12 times.
 
-In terms of wall-clock time, for each script run, the third and fourth calls to train the model seem to provide stabilized number.
+In terms of wall-clock time, for each script run, the third and fourth calls to train the model seem to provide consistent numbers.
 Namely, for Mac, results in seconds are:
 28.086050, 28.610886, 28.562303, 28.036568, 28.602799, 28.396387 with the mean 28.382499.
 
@@ -24,12 +24,11 @@ So, for this training, **Linux with the 1080 GPU was 159x faster than the Mac mi
 When I was running my scripts to test accuracy against CIFAR-10, it took 5+ hours to run 100 epochs (e.g. 5.17 hours for the keras_29 script).  If I had run these scripts on my Mac mini, it would have taken 795 hours or 33 days.  I haven't seen a performance metrics between the latest version of Macbook Pro vs 2014 Mac mini, but I doubt that it's 159x faster.
 
 ## Implications
-I'd like to share my view on how the need for GPU would impact software development companies who are building a team of ML developers or data scientists for image processing (classification/object detection/generation) using a convolutional neural network.  My experience is more limited for NLP, but my experience is that LSTM is also slow to train on CPU which is demonstrated by the fact that there is a special Keras LSTM class for GPU called [CuDNNLSTM](https://keras.io/layers/recurrent/).
-Therefore, for a ML developer, GPU is not a nice to have hardware, but a must-have as it is nearly impossible for a developer to develop an ML application and wait for 30+ days to get a result of a single run.
+I'd like to share my view on how the need for GPU would impact software development companies who are or will be building a team of ML developers or data scientists for image processing (classification/object detection/generation) using a convolutional neural network.  My experience is more limited for NLP, but my experience is that LSTM is also slow to train on CPU which is demonstrated by the fact that there is a special Keras LSTM class for GPU called [CuDNNLSTM](https://keras.io/layers/recurrent/).
+Because of the slowness of training on CPU, a developer in the above mentioned ML areas, GPU is not a nice to have hardware, but a must-have as it is nearly impossible for a developer to develop an ML application and wait for 30+ days to get a result of a single run.
 
-I see two paths.  One is to use a crowd ventor's GPU environment such as AWS.  Another option is to work with the IT team for getting a desktop with an highend GPU.
-If you have CI environment, the demand will also go up for machines with GPU to train the model.
-
+I see two paths forward.  One is to use a crowd vendor's GPU environment such as AWS.  Another option is to work with the IT team for getting a desktop with an highend GPU.  The first option may be relatively painless if your CI and production environment already run in crowd vendor's space.  However, if you have a inhouse CI environment, that means that you also need to have the CI environment set up with the crowd vendor to do an official training of a model and test.
+If you go for the second option, then instead of or in addition to handing out a high-end laptop, you also need to start handing out a desktop or a special laptop with a high-end GPU.
 
 ## Script used
 [Modified version of CIFAR-10 classification script](https://github.com/hideyukiinada/benchmark/blob/master/project/benchmark1) to just run a single batch
